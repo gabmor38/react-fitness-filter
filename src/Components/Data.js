@@ -147,12 +147,12 @@
     target:"cardiovascular system"
   },
   {
-    bodyPart: "back",
-    equipment: "leverage machine",
-    gifUrl: "http://d205bpvrqc9yn1.cloudfront.net/0015.gif",
-    id: "19",
-    name: "assisted parallel close grip pull-up",
-    target: "lats"
+    bodyPart:"cardio",
+    equipment:"dumbbell",
+    gifUrl:"http://d205bpvrqc9yn1.cloudfront.net/1201.gif",
+    id:"19",
+    name:"dumbbell burpee",
+    target:"cardiovascular system"
   },
   {
     bodyPart: "back",
