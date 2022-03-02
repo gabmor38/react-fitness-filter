@@ -8,9 +8,18 @@ function App() {
 
 const [item, setItem]=useState(Data); //manages the state of the API
 
-//filter through exerciseItems
+//create a new array with just the bodypart
 
-const exerciseItems = [...new Set(Data.map((exercise) => exercise.bodyPart))];
+const exerciseCategory = [...new Set(Data.map((exercise) => exercise.bodyPart))];
+
+// create filter for all of the Buttons
+
+const filterItem = (currentBodyPart) => {
+  const newItem = Data.filter((newValue) => {
+    return newValue.bodyPart === currentBodyPart;
+  })
+  setItem(newItem);
+}
 
   return (
     <>
@@ -18,7 +27,9 @@ const exerciseItems = [...new Set(Data.map((exercise) => exercise.bodyPart))];
         <div className="row">
         <h1 className="col-12 text-center my-3 fw-bold">Exercises</h1>
         <Buttons
-          exerciseItems={exerciseItems}
+          filterItem={filterItem}
+          exerciseCategory={exerciseCategory}
+          setItem={setItem}
         />
         <Card item={item}/>
         </div>
