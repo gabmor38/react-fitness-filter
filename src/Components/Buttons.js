@@ -16,7 +16,7 @@ export default function Buttons(props) {
             onClick={() => filterItem(exercise)}
             key={id}
             >
-            {exercise}
+            {exercise.toUpperCase()}
             </button>
           );
         }
@@ -25,7 +25,7 @@ export default function Buttons(props) {
         <button className="btn-dark text-white p-1 px-2 mx-5 btn fw-bold"
           onClick={() => setItem(Data)}   // this button will select all of the categories
         >
-        All Categories
+        {'All Categories'.toUpperCase()}
         </button>
       </div>
     </>
