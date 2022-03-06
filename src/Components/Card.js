@@ -8,15 +8,16 @@ return (
       <div className="row justify-content-center">
         {props.item.map((exercise) => {
           return (
-            <div className="col-md-4 col-sm-6 card my-3 py-3 border-0"
+            <div className="col-md-3 col-sm-6 card border-1 flex-row align-items-center m-1"
               key={exercise.id}
             >
+              <img  style={{width: '200px'}}src={exercise.gifUrl} alt={exercise.title}/>
               <div className="card-body">
-                <div className="card-title fw-bold fs-4 text-center">
-                <span><img src={exercise.gifUrl} alt={exercise.title}/></span>
-                  {exercise.name}
+                <div className="card-title fw-bold text-center">
+                  {exercise.name.toUpperCase()}
                 </div>
-                <div className="card-text">
+                <div className="card-text text-center">
+                Target: {exercise.target}
                 {exercise.bodypart}
                 </div>
               </div>
